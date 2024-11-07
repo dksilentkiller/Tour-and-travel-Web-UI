@@ -1,0 +1,59 @@
+Golobe  ---  httpswww.figma.comdesignIJ4zDeiUXsv2z0LOtrUNROGolobenode-id=108-18842&t=qsA2YFDYMyxMmCjT-0
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From-To Input Box</title>
+    <style>
+        .from-to-wrapper {
+            position: relative;
+            width: fit-content;
+            font-family: Arial, sans-serif;
+        }
+
+        .from-to-label {
+            position: absolute;
+            top: -6px;
+            left: 15px;
+            background-color: #fff;
+            padding: 0 5px;
+            color: #666;
+            font-size: 12px;
+        }
+
+        .from-to-container {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            padding-top: 15px;
+        }
+
+        .from-to-value {
+            flex-grow: 1;
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .swap-icon {
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="from-to-wrapper">
+        <div class="from-to-label">From - To</div>
+        <div class="from-to-container">
+            <span class="from-to-value">Lahore - Karachi</span>
+            <span class="swap-icon">&#x21c4;</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Footer Example</title>
+    <style>
+
+
+/* Footer start */
+        .footer {
+            background-color: #8ed3b2;
+            /* Light green color similar to the one in the image */
+            padding: 40px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            text-align: center;
+        }
+
+        /* logo flip */
+        .flip-box {
+            background-color: transparent;
+            width: 200px;
+            height: 160px;
+            perspective: 1000px;
+        }
+
+        /* This container is needed to position the front and back side */
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-box:hover .flip-box-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Position the front and back side */
+        .flip-box-front,
+        .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+
+        /* Style the front side (fallback if image is missing) */
+        .flip-box-front {
+            color: black;
+        }
+
+        /* Style the back side */
+        .flip-box-back {
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        /* logo flip */
+
+        .logo-image {
+            max-width: 150px;
+            margin-bottom: 20px;
+            filter: drop-shadow(2px 2px 20px #0770104d);
+            /*image edgs glow*/
+        }
+
+        .social-icons a {
+            color: black;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        .footer-column {
+            min-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h3 {
+            color: black;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #416752;
+            text-decoration: none;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+        /* footer end */
+    </style>
+</head>
+
+<body>
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="images/dklogo.png" alt="logo" class="logo-image">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Thank You</h2>
+                            <p>For Choosing Us</p>
+                            <p>🥰🥰🥰🥰</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Our Destinations</h3>
+                <ul>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">Alaska</a></li>
+                    <li><a href="#">France</a></li>
+                    <li><a href="#">Iceland</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Our Activities</h3>
+                <ul>
+                    <li><a href="#">Northern Lights</a></li>
+                    <li><a href="#">Cruising & Sailing</a></li>
+                    <li><a href="#">Multi-activities</a></li>
+                    <li><a href="#">Kayaking</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Travel Blogs</h3>
+                <ul>
+                    <li><a href="#">Bali Travel Guide</a></li>
+                    <li><a href="#">Sri Lanka Travel Guide</a></li>
+                    <li><a href="#">Peru Travel Guide</a></li>
+                    <li><a href="#">Bali Travel Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Work with Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Work with Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- FontAwesome icons (optional) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

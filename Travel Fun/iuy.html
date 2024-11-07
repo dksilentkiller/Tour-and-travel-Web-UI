@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* (Include the CSS provided above) */
+        .flight-search-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: flex-start;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .tabs button {
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .tabs button.active {
+            border-bottom: 3px solid #31c48d;
+            color: #31c48d;
+            font-weight: 700;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: nowrap;
+        }
+
+        .fieldset-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        fieldset {
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        legend {
+            font-weight: 700;
+            color: #2d4039;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select {
+            border: 1px solid #d1d5db00;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #4a4a4a;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="date"] {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-group .swap-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: #31c48d;
+        }
+
+        .promo-code,
+        .show-flights-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            justify-content: right;
+        }
+
+        .promo-code a {
+            text-decoration: none;
+            color: #646464;
+            font-weight: 500;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        .show-flights-button button {
+            background-color: #31c48d;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flight-search-container">
+        <div class="tabs">
+            <button class="active">✈️ Flights</button>
+            <button>🏨 Stays</button>
+        </div>
+        <div class="form-group">
+            <div class="fieldset-container">
+                <fieldset>
+                    <legend>From - To</legend>
+                    <input type="text" placeholder="Lahore - Karachi">
+                    <!-- <button class="swap-button">&#x21c4;</button> -->
+                </fieldset>
+
+            </div>
+            <div class="fieldset-container">
+                <fieldset>
+                    <legend>Type</legend>
+                    <select>
+                        <option value="return" selected>Return</option>
+                        <option value="one-way">One-way</option>
+                        <option value="multi-city">Multi-city</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div class="fieldset-container">
+                <fieldset>
+                    <legend>Departure Date</legend>
+                    <input type="date" value="2022-11-07">
+                </fieldset>
+            </div>
+            <div class="fieldset-container">
+                <fieldset>
+                    <legend>Return Date</legend>
+                    <input type="date" value="2022-11-13">
+                </fieldset>
+            </div>
+            <div class="fieldset-container">
+                <fieldset>
+                    <legend>Passengers</legend>
+                    <input type="text" placeholder="1 Passenger, Economy" value="1 Passenger, Economy">
+                </fieldset>
+            </div>
+        </div>
+        <div class="promo-code">
+            <div>
+                <a href="#">+ Add Promo Code</a>
+            </div>
+            <div class="show-flights-button">
+                <button>🚀 Show Flights</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
